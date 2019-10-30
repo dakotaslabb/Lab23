@@ -1,0 +1,30 @@
+﻿@model Lab_23.Models.Products
+
+@{
+    ViewData["Title"] = "Buy";
+}
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+
+    <p>Would you like to purchase this?</p>
+    <a asp-action="Recipte" asp-route-id="@Model.Id">Yes</a> |
+    <a asp-action="Products">No</a>
+</div>

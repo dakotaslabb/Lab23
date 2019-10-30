@@ -1,0 +1,13 @@
+﻿@model Lab_23.Models.Products
+
+@ViewBag.Error
+@ViewBag.Purchase
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Price)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Price)
+    </dd>
+    <a asp-action="Products">Products</a>
+</dl>
